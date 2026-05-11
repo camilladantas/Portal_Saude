@@ -1,0 +1,688 @@
+/* Variáveis para cores */
+:root { 
+    --cor-primaria:   #0077B6;
+    --cor-secundaria: #2A9D8F;
+    --cor-terciaria:  #005f87;
+    --cor-destaque:   #E76F51;
+    --cor-fundo:      #F8F9FA;
+    --cor-texto:      #2B2D42;
+    --cor-branco:     #ffffff;
+}
+
+
+/* GERAL — TODAS AS PÁGINAS */
+
+/* Zera margens e padding padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração base do corpo da página */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Fonte padrão dos títulos */
+h1, h2, h3 {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+}
+
+/* Espaçamento interno de cada seção */
+main section {
+    padding: 60px 20px;
+}
+
+/* Título h2 padrão das seções */
+main section h2 {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Parágrafo de introdução das seções */
+main section > p {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Fundo e padding do header */
+header {
+    background-color: var(--cor-terciaria);
+    padding: 15px 40px;
+}
+
+/* Nav em flexbox para separar logo e menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Agrupa logo e título lado a lado */
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Título do portal no header */
+nav h1 {
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--cor-branco);
+}
+
+/* Itens do menu em linha */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo dos links do menu */
+nav a {
+    text-decoration: none;
+    color: var(--cor-branco);
+    font-weight: bold;
+    font-size: 19px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Efeito pra quando passasr o mouse no menu */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Fundo e texto do rodapé */
+footer {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 25px;
+}
+
+/* Banner hero com degradê, usado na primeira seção de cada página */
+.banner-hero {
+    background: linear-gradient(120deg, var(--cor-primaria) 0%, var(--cor-secundaria) 60%, #1b4965 100%);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 120px 20px !important;
+}
+
+/* Título grande do banner */
+.banner-hero h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: var(--cor-branco) !important;
+}
+
+/* Parágrafo do banner */
+.banner-hero p {
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: var(--cor-branco) !important;
+}
+
+/* Botão de destaque do banner */
+.banner-hero a {
+    background: var(--cor-destaque);
+    color: var(--cor-branco);
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Animação de subida no hover do botão */
+.banner-hero a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de final no final de tudo */
+.secao-final {
+    background: linear-gradient(120deg, #e3f2fd, #d1ecf1);
+    text-align: center;
+    padding: 80px 20px !important;
+}
+
+/* Título da seção final */
+.secao-final h2 {
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+}
+
+/* Parágrafo da seção final */
+.secao-final p {
+    max-width: 600px;
+    margin: 15px auto 30px auto;
+}
+
+/* Botão arredondado da seção final */
+.secao-final a {
+    display: inline-block;
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 16px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;   
+}
+
+/* Efeito no botão do hover */
+.secao-final a:hover {
+    background: var(--cor-secundaria);
+    transform: translateY(-3px);
+}
+
+/* Links que abrem em nova aba */
+a [target="_blank"] {
+    text-decoration: underline dotted;
+}
+
+/* Imagens com atributo alt */
+img [alt] {
+    border-radius: 8px;
+}
+
+/* Remove margens padrão do figure */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* Legenda das imagens */
+figcaption {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+
+/* TELA INICIAL */
+
+/* Container dos cards em flexbox */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Estilo base de cada card */
+article {
+    background: var(--cor-branco);
+    padding: 30px 25px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de levantar o card no hover */
+article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de cada card */
+article h3 {
+    margin-bottom: 15px;
+    color: var(--cor-secundaria);
+    font-size: 1.3rem;
+}
+
+/* Texto de cada card */
+article p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* PREVENÇÃO DE DOENÇAs */
+
+/* Lista de doenças com borda lateral colorida */
+#lista-campanhas {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Cada item da lista */
+#lista-campanhas li {
+    background: var(--cor-fundo);
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-left: 5px solid var(--cor-destaque);
+    border-radius: 5px;
+}
+
+/* Tabela de sinais de alerta */
+.tabela-sinais {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: var(--cor-branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Cabeçalho da tabela */
+.tabela-sinais thead {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+/*  Cada bloquinho do topo da tabela */
+.tabela-sinais th {
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Cada bloquinho do corpo da tabela */
+.tabela-sinais td {
+    padding: 15px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+}
+
+/* Efeito na linha quando passa o mouse por cima */
+.tabela-sinais tbody tr:hover {
+    background: #f1f7fb;
+}
+
+/* Cores de urgência da tabela */
+.tabela-sinais td.alta  { 
+    color: #c0392b; font-weight: bold; 
+}
+
+.tabela-sinais td.media { 
+    color: #d68910; font-weight: bold; 
+}
+
+.tabela-sinais td.baixa { 
+    color: #1e8449; font-weight: bold; 
+}
+
+/* Container dos cards de saúde mental */
+.mental-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+}
+
+/* Card individual de saúde mental */
+.mental-card {
+    background: var(--cor-branco);
+    padding: 25px;
+    width: 260px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* Efeito de levantar no hover */
+.mental-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do card de saúde mental */
+.mental-card h3 {
+    font-size: 1.2rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Texto do card de saúde mental */
+.mental-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Caixa de aviso do CAPS */
+.aviso-mental {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    background: #eaf4ff;
+    padding: 20px 24px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #1a3a52;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+/* UNIDADES DE SAÚDE */
+
+/* Container principal das UBS em coluna */
+.container-ubs {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Card de cada UBS com foto e informações lado a lado */
+.ubs-card {
+    display: flex;
+    background: var(--cor-branco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+/* Efeito de subir o card no hover */
+.ubs-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Foto da UBS */
+.ubs-img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.ubs-card figure {
+    width: 350px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Texto com informações da UBS */
+.ubs-informacoes {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Nome da UBS */
+.ubs-informacoes h3 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Linhas de informação (endereço, horário...) */
+.ubs-informacoes p {
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+    font-size: 1.05rem;
+}
+
+/* Botão de ver no mapa */
+.botao-mapa {
+    margin-top: 15px;
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    align-self: flex-start;
+    transition: 0.3s;
+}
+
+/* Escurece o botão no hover */
+.botao-mapa:hover {
+    background-color: #218276;
+}
+
+
+
+
+/* SOBRE NÓS */
+
+/* Container dos cards de fontes em flexbox */
+.fontes-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 30px auto 0 auto;
+}
+
+/* Card de cada fonte de informação */
+.fonte-card {
+    background: var(--cor-branco);
+    width: 240px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+/* Sobe o card no hover */
+.fonte-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.13);
+}
+
+/* Barra colorida no topo de cada card */
+.fonte-card .fonte-topo {
+    height: 8px;
+}
+
+/* Cada card recebe uma cor diferente da paleta de cores do sistema */
+.fonte-card:nth-child(1) .fonte-topo { 
+    background: var(--cor-primaria); 
+}
+
+.fonte-card:nth-child(2) .fonte-topo { 
+    background: var(--cor-secundaria); 
+}
+
+.fonte-card:nth-child(3) .fonte-topo { 
+    background: var(--cor-destaque); 
+}
+
+.fonte-card:nth-child(4) .fonte-topo { 
+    background: var(--cor-terciaria); 
+}
+
+/* Área de texto do card */
+.fonte-card .fonte-corpo {
+    padding: 20px;
+}
+
+/* Nome da fonte */
+.fonte-card h3 {
+    font-size: 1rem;
+    color: var(--cor-texto);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+/* Descrição da fonte */
+.fonte-card p {
+    font-size: 0.88rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* RESPONSIVIDADE */
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    /* Header empilha logo e menu */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    /* Menu quebra linha se necessário */
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* Fonte menor nos links do menu */
+    nav a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    /* Banner com menos altura */
+    .banner-hero {
+        padding: 80px 20px !important;
+    }
+
+    /* Título menor no banner */
+    .banner-hero h2 {
+        font-size: 2rem;
+    }
+
+    /* Cards ocupam largura total */
+    article {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Card da UBS empilha foto e texto */
+    .ubs-card {
+        flex-direction: column;
+    }
+
+    /* Foto ocupa largura total */
+    .ubs-img {
+        width: 100%;
+        height: 220px;
+    }
+
+    /* Tabela com scroll horizontal em telas menores */
+    .tabela-sinais {
+        display: block;
+        overflow-x: auto;
+    }
+
+    /* Cards de fontes ocupam mais espaço */
+    .fonte-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    /* Header menor */
+    header {
+        padding: 12px 16px;
+    }
+
+    /* Título menor no header */
+    nav h1 {
+        font-size: 18px;
+    }
+
+    /* Menos espaço entre links do menu */
+    nav ul {
+        gap: 6px;
+    }
+
+    /* Fonte ainda menor nos links */
+    nav a {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    /* Banner mais compacto */
+    .banner-hero {
+        padding: 60px 16px !important;
+    }
+
+    /* Títulos menores no banner */
+    .banner-hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .banner-hero p {
+        font-size: 0.95rem;
+    }
+
+    main section {
+        padding: 40px 16px;
+    }
+
+    /* Títulos menores nas seções */
+    main section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* final */
+    .secao-final {
+        padding: 50px 16px !important;
+    }
+
+    .secao-final h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Cards de saúde mental ocupam largura total */
+    .mental-card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    #lista-campanhas {
+        padding: 0 8px;
+    }
+}
